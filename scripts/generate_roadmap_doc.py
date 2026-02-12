@@ -99,6 +99,17 @@ def escape_md_link(text):
     return text.replace("[", "\\[").replace("]", "\\]")
 
 
+def format_description_block(desc):
+    """Format description as a blockquote so it stays one block and list markers don't break layout."""
+    if not desc:
+        return []
+    out = []
+    for line in desc.split("\n"):
+        # Preserve empty lines as empty blockquote lines for paragraph breaks
+        out.append("> " + line if line.strip() else ">")
+    return out
+
+
 def write_markdown(rows, output_path, run_date=None):
     """Write the full roadmap Markdown document."""
     run_date = run_date or datetime.utcnow().strftime("%Y-%m-%d")
@@ -107,7 +118,7 @@ def write_markdown(rows, output_path, run_date=None):
     lines = [
         "# Elastic Public Roadmap – Overview",
         "",
-        "This document is a snapshot of the [Elastic Public Roadmap]({url}) for technical teams who already work with the Elastic stack. It summarises what’s on the board so you can share or discuss priorities with your colleagues. For the latest updates and live view, use the source link below.",
+        f"This document is a snapshot of the [Elastic Public Roadmap]({ROADMAP_URL}) for technical teams who already work with the Elastic stack. It summarises what's on the board so you can share or discuss priorities with your colleagues. For the latest updates and live view, use the source link below.",
         "",
         f"**Source:** [Elastic Public Roadmap (GitHub)]({ROADMAP_URL})",
         "",
@@ -128,8 +139,11 @@ def write_markdown(rows, output_path, run_date=None):
         if k not in ordered_statuses:
             ordered_statuses.append(k)
 
-    for status in ordered_statuses:
+    for i, status in enumerate(ordered_statuses):
         items = groups[status]
+        if i > 0:
+            lines.append("---")
+            lines.append("")
         lines.append(f"## {status}")
         lines.append("")
         for r in items:
@@ -141,19 +155,23 @@ def write_markdown(rows, output_path, run_date=None):
             elif title:
                 lines.append(f"- **{title}**")
             if desc:
-                lines.append(f"  - {desc}")
+                lines.append("")
+                lines.extend(format_description_block(desc))
+                lines.append("")
+            else:
+                lines.append("")
         lines.append("")
 
     lines.extend([
         "---",
         "",
-        "For the current list and any changes since this snapshot, see the live board: [Elastic Public Roadmap]({url}).",
+        f"For the current list and any changes since this snapshot, see the live board: [Elastic Public Roadmap]({ROADMAP_URL}).",
         "",
         f"*Last updated: {run_date} (from exported view data).*",
         "",
     ])
 
-    content = "\n".join(lines).format(url=ROADMAP_URL)
+    content = "\n".join(lines)
     os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(content)

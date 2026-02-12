@@ -22,6 +22,33 @@ import sys
 ROADMAP_URL = "https://github.com/orgs/elastic/projects/2066/views/2"
 ROADMAP_REPO_API = "https://api.github.com/repos/elastic/roadmap/issues"
 
+# Max length for description in export; we truncate at a complete sentence.
+MAX_DESCRIPTION_LENGTH = 2500
+SENTENCE_ENDINGS = (". ", "! ", "? ", ".\n", "!\n", "?\n")
+
+
+def truncate_at_sentence(text: str, max_len: int = MAX_DESCRIPTION_LENGTH) -> str:
+    """Return text truncated at the last complete sentence before max_len."""
+    text = (text or "").strip()
+    if len(text) <= max_len:
+        return text
+    chunk = text[: max_len + 1]
+    best_end = -1
+    for ending in SENTENCE_ENDINGS:
+        needle = ending.rstrip()
+        pos = chunk.rfind(needle)
+        if pos >= 0:
+            end_pos = pos + len(needle)
+            if end_pos > best_end:
+                best_end = end_pos
+    if best_end > 0:
+        return chunk[:best_end].strip() + " …"
+    # No sentence end found; break at last space to avoid cutting a word
+    last_space = chunk.rfind(" ", 0, max_len)
+    if last_space > max_len // 2:
+        return chunk[:last_space].strip() + " …"
+    return chunk[:max_len].strip() + " …"
+
 
 def fetch_all_via_api() -> list:
     """Fetch all issues from elastic/roadmap via REST API (no auth)."""
@@ -50,9 +77,7 @@ def fetch_all_via_api() -> list:
                 continue
             url = issue.get("html_url") or ""
             state = (issue.get("state") or "").strip().capitalize()
-            body = (issue.get("body") or "").strip()
-            if len(body) > 400:
-                body = body[:397] + "..."
+            body = truncate_at_sentence((issue.get("body") or "").strip())
             rows.append({
                 "Title": title,
                 "Status": state,
