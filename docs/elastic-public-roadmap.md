@@ -1,0 +1,1275 @@
+# Elastic Public Roadmap – Overview
+
+This document is a snapshot of the [Elastic Public Roadmap](https://github.com/orgs/elastic/projects/2066/views/2) for technical teams who already work with the Elastic stack. It summarises what’s on the board so you can share or discuss priorities with your colleagues. For the latest updates and live view, use the source link below.
+
+**Source:** [Elastic Public Roadmap (GitHub)](https://github.com/orgs/elastic/projects/2066/views/2)
+
+---
+
+## How this roadmap is organised
+
+Items are grouped by status (e.g. In progress, Planned, Done). Each entry lists the title and, when available, a link to the source issue or card.
+
+---
+
+## Open
+
+- **[ES|QL: Lookup on more flexible criteria than single exact match](https://github.com/elastic/roadmap/issues/225)**
+  - **Value Proposition**
+
+Lookup Join introduced the ability to do SQL-style LEFT OUTER JOINs in ES|QL. The initial release of Lookup Join relies on a common field name between the left index (from the source command) and the right index (the lookup index), and an exact match of the field values. This satisfies many use cases but more flexibility is needed for other use cases. Users need to match ...
+- **[ES|QL: Lookup Join on wildcard match](https://github.com/elastic/roadmap/issues/224)**
+  - **Value Proposition**
+
+Lookup Join introduced the ability to do SQL-style LEFT OUTER JOINs in ES|QL. The initial release of Lookup Join relies on a common field name between the left index (from the source command) and the right index (the lookup index), and an exact match of the field values. This satisfies many use cases but more flexibility is needed for other use cases. Some users need to m...
+- **[Adding Serverless regions: 4 Azure](https://github.com/elastic/roadmap/issues/223)**
+  - **What the feature is and who it’s for**
+We will be adding 4 more Serverless regions for customers to create Serverless projects to a region closer to them. 
+
+**Value proposition**
+With Elastic Cloud Serverless, customers can now deploy closer to your users and data — reducing latency, supporting data residency and compliance requirements, and simplifying multicloud operations. Whether you're b...
+- **[:warning:  :warning:  NOTE - Timeline subject to change without prior notice](https://github.com/elastic/roadmap/issues/222)**
+  - Welcome to our product roadmap! We're excited to share a glimpse into what we're working on at Elastic and where we're headed. It is worth noting that this roadmap is a living document and is subject to change and often does, so please keep this in mind.
+- **[Automatic Import Updates](https://github.com/elastic/roadmap/issues/221)**
+  - **What the feature is (as Title)** Automatic Import Updates
+
+**Value proposition** Backend changes to improve Automatic Import with reliability, scalability, better agentic ai workflows, etc. New updates will allow adding multiple data streams, editing/versioning of automatic import created integrations, and creating integrations from existing index.
+
+**Expected outcome** This will allow for be...
+- **[\[GA\] Attack Discovery API](https://github.com/elastic/roadmap/issues/220)**
+  - **What the feature is**: Attack Discovery API
+
+**Value proposition**: Attack Discovery can now be triggered programmatically, via any automation platform or tooling that users wish. This API also includes the ability to update workflow state, sharing options, and much more, giving users the freedom to automate any of this functionality. 
+
+**Expected outcome**: Whilst users enjoy leveraging Atta...
+- **[Permissions for Detection Engineers with extended granularity](https://github.com/elastic/roadmap/issues/219)**
+  - **Value proposition**
+Allows admin to setup roles with different levels of privilege for managing Security Rules, Exceptions and Alerts to achieve the principle of the least privilege.
+
+**Expected outcome**
+New permissions available for users to setup desired roles.
+New prebuilt roles utilizing new privileges combinations.
+
+**Key user stories / use cases**
+As an admin, I want to allow Analysts ...
+- **[AI Agent monitoring and evaluation](https://github.com/elastic/roadmap/issues/218)**
+  - **What we are building*
+This provides a solution to effectively monitor and evaluate AI Agents created using Elastic Agent Builder. 
+- Visualize traces of the agent conversation including tool calls, search results, and generated outputs 
+- Receive metrics on the performance of retrieval steps in the Agent based on LLM-as-a-judge evaluators 
+- View key Agent metrics like groundedness, factualit...
+- **[User-friendly multimodal image search support](https://github.com/elastic/roadmap/issues/217)**
+  - **What the feature is**
+
+Our aim is to make image search as easy as `semantic_text` made semantic search. In other words, users don't need to implement all of the plumbing necessary to search on images, but can instead get up and running in hours.
+
+**Value proposition**
+
+Searching on images are high-value actions, but implementation is difficult. By making it easier, users can build highly enga...
+- **[Remove limitations on full text functions in ES|QL](https://github.com/elastic/roadmap/issues/216)**
+  - **What the feature is**
+
+Full text functions cannot be currently used in ES|QL after pipeline breakers or on runtime columns. We will lift both of these restrictions.
+
+**Value proposition**
+
+This change will reduce user friction and enable advanced search capabilities not available in query DSL via search on runtime columns. By allowing for full text functions after pipeline breakers, we enable...
+- **[ES|QL FORK command](https://github.com/elastic/roadmap/issues/215)**
+  - **What the feature is**
+
+The `FORK` processing command creates multiple execution branches to operate on the same input data and combines the results in a single output table.
+
+In this quarter, we aim to move `FORK` from tech preview to GA.
+
+**Value proposition**
+
+Users can run multiple queries, differentiate, mutate, and merge them together. This can enable such search use cases such as [hybri...
+- **[Highlight support in ES|QL](https://github.com/elastic/roadmap/issues/214)**
+  - **What the feature is**
+
+Support for highlighting in ES|QL using the unified highlighter.
+
+**Value proposition**
+
+Retrieve the best-matching highlighted snippets from one or more fields in your search results so you can show users where the query matches are.
+
+**Expected outcome**
+
+From within an ES|QL query, users can request highlighting of their matches, and see those highlights alongside th...
+- **[Terraform Elasticstack - Better fleet integration, Dashboards as code tech preview](https://github.com/elastic/roadmap/issues/213)**
+  - **Terrafrom Fleet integration, Dashboards as code tech-preview**
+Recent improvements to the Elastic Stack and Elastic Cloud Terraform providers introduce advanced Infrastructure-as-Code capabilities for the latest stack and cloud features. These enhancements give administrators increased control and flexibility when managing Elastic environments with Terraform.
+
+**Value proposition**
+This relea...
+- **[Script library and runscript response action](https://github.com/elastic/roadmap/issues/211)**
+  - **What the feature is (as Title)**
+
+**Value proposition**
+Elastic Security introduces a new response action that allows security teams to execute scripts from a centralized Script Library during investigations or as automated responses. It enables fast, consistent, and repeatable actions without relying on ad-hoc commands.
+
+**Expected outcome**
+- Execute approved scripts from a managed Script L...
+- **[More Advanced Insights for Increased Correlations](https://github.com/elastic/roadmap/issues/207)**
+  - ## More Advanced Insights for Increased Correlations
+
+### Value proposition
+
+To enhance the alert and attack investigation experience, we will evolve our capabilities to provide more advanced insights for correlating related information. This includes cross-referencing information such as related cases and alerts, as well as related attacks, entities, and chats. By correlating with other critic...
+- **[User Defined Alert Templates](https://github.com/elastic/roadmap/issues/206)**
+  - ## User Defined Alert Templates
+
+### Value proposition
+
+Users currently spend time customizing their alert experience for different use cases by adjusting page controls, visualizations, table columns, and event table grouping. However, these configurations are only saved locally, which prevents sharing them with team members.
+
+This feature will solve this limitation by allowing users to save th...
+- **[Release of Improved Attack Experience](https://github.com/elastic/roadmap/issues/205)**
+  - ## Release of Improved Attack Experience
+
+### Value proposition
+
+The focus of this initiative is the general availability (GA) release of the enhanced attack experience. To effectively triage attacks, analysts need consistency with the existing alert workflows, as previously discussed. Key improvements include better alert correlations, improved table grouping functionality, and new attack view...
+- **[New Detection Overview Dashboard](https://github.com/elastic/roadmap/issues/204)**
+  - ## New Detection Overview Dashboard
+
+### Value proposition
+
+As experiences evolve to improve the triage of attacks and alerts, users require a clear detections overview dashboard within the Security Solution. This dashboard will summarize critical detections and provide users with key performance indicators (KPIs) related to all alert and attack data.
+
+Key features may include:
+* **Alert and At...
+- **[New Attack Viewer for Context Pivoting](https://github.com/elastic/roadmap/issues/203)**
+  - ## New Attack Viewer for Context Pivoting
+
+### Value proposition
+
+Analyst workflows currently include a dedicated experience for viewing attacks, which is effective for immediate response. However, this approach limits the ability to easily cross-reference and preview attack details within other relevant contexts. For example, when an analyst is viewing an alert associated with an attack, they ...
+- **[Improved Attack Triage Experience](https://github.com/elastic/roadmap/issues/202)**
+  - ## Improved Attack Triage Experience
+
+### Value proposition
+
+Attack Discovery provides analysts with a summarized detection that groups and contextualizes related alerts. With the release of attack scheduling, analysts require a dedicated experience for triage and response. By basing this on the familiar alerts page, analysts will have established workflows for responding to and investigating t...
+- **[Add Windows ARM support for Elastic Defend](https://github.com/elastic/roadmap/issues/200)**
+  - **What the feature is (as Title)**: Windows ARM support for Elastic Defend
+
+**Value proposition**: With native ARM support, analysts can monitor and protect all Windows endpoints with the same fidelity, speed, and reliability as traditional x86 systems.
+
+Adding Elastic Defend support for ARM eliminates coverage gaps as organizations adopt ARM-based laptops and Copilot+ PCs, ensuring that detect...
+- **[Custom YARA rules](https://github.com/elastic/roadmap/issues/199)**
+  - **Value proposition**
+Enable Elastic Defend users to automatically detect known malware and suspicious patterns through automated YARA scans integrated with Elastic Defend, while also providing the flexibility to add and manage custom YARA rules directly from the Elastic Security UI. This enhances Elastic Defend’s threat detection depth and gives analysts more control over custom detection logi...
+- **[Endpoint Forensics - Osquery](https://github.com/elastic/roadmap/issues/198)**
+  - **Value proposition**
+Enable analysts and responders to perform deep forensic analysis directly from Elastic Security Osquery Manager by enhancing osquery-based endpoint visibility, performance, and usability. This includes expanding forensic coverage via new osquery tables (browser history, amcache, jumplists and open handles and improving the in-product osquery interface with new out-of-the-b...
+- **[Memory dump Linux response action](https://github.com/elastic/roadmap/issues/197)**
+  - **Value proposition**
+Extend Elastic Security’s forensic and response capabilities to Linux endpoints by enabling remote process memory dump collection. This allows analysts to capture memory snapshots from specific Linux processes directly from the Response Console, facilitating rapid malware triage, memory-resident threat detection, and post-compromise investigation.
+
+**Expected outcome**
+
+- ...
+- **[FedRAMP High Authorization for Elastic Cloud Hosted on AWS GovCloud](https://github.com/elastic/roadmap/issues/194)**
+  - **What the feature is**
+We are working toward achieving FedRAMP High authorization for our Elastic Cloud Hosted (ECH) product in AWS GovCloud (US). This authorization would certify that Elastic’s managed cloud platform satisfies more than 400 rigorous FedRAMP controls, ensuring secure and compliant operations for mission-critical workloads across federal, state, and local agencies. This is in a...
+- **[OTLP Endpoint for Elastic Cloud Hosted](https://github.com/elastic/roadmap/issues/193)**
+  - **What the feature is (as Title)**
+A managed OTLP endpoint, like that which is available in Serverless, for accepting native OTLP data directly into Elastic Cloud Hosted clusters.
+
+**Value proposition**
+No longer requires running a Gateway or using Elastic's APM Server to accept OTLP data into an Elastic Cloud Hosted cluster.
+- **[Easy CSP Ingest with EDOT Cloud Forwarder](https://github.com/elastic/roadmap/issues/192)**
+  - **What the feature is (as Title)**
+EDOT Collector specially packaged to support connecting Cloud Service Provider accounts and projects to Elastic Cloud Hosted and Serverless Projects.
+
+**Value proposition**
+Auto-scaling Agent-less ingest simplifies getting data from cloud providers.
+- **[Best-Practice OOTB Alerts for popular off-the-shelf services with Elastic Integrations](https://github.com/elastic/roadmap/issues/191)**
+  - **What the feature is (as Title)** Best-Practice OOTB Alerts for popular off-the-shelf services with Elastic Integrations
+Elastic OOTB alert rule templates enable users to set monitoring coverage for their most popular off the shelf services, with minimum investment and expertise needed. 
+
+**Value proposition**
+***- User & Problem:***
+SREs and developers who rely on critical Elastic-monitored s...
+- **[Enhanced Insight and Usability of OOTB Dashboards for popular off-the-shelf services](https://github.com/elastic/roadmap/issues/190)**
+  - **What the feature is (as Title)** Enhanced Insight and Usability of OOTB Dashboards for popular off-the-shelf services
+We are reimagining the OOTB dashboards for popular off-the-shelf (OTS) services, to deliver enhanced insight and a superior user experience. Our focus is on better usability, navigability, structure based on key use cases, and visual consistency. This ensures users can quickly...
+- **[Find the signal in the noise with ESQL-powered Log Pattern Analysis in Discover](https://github.com/elastic/roadmap/issues/186)**
+  - ## Value proposition
+
+Turn noisy logs to signal, fast. Use ES|QL-powered Log Pattern Analysis in your Discover workflows to cluster messages, surface what changed, and drill into root causes, all without context switching or hopping tools, drastically speeding RCA and reducing MTTR. 
+
+## Expected outcome  
+
+Users are able to use the full power of Log Pattern Analysis within Discover with a deli...
+- **[Fast, approximate ES|QL queries for analyzing very large datasets](https://github.com/elastic/roadmap/issues/185)**
+  - ## Value proposition
+
+Get near-instant insights from massive datasets by executing high-speed, approximate analytical queries. This allows them to make faster analysis in Discover and Dashboards without waiting for resource-intensive, exact computations. 
+
+## Expected outcome 
+Data analysts and SRE obtain fast approximate insights from very large datasets. Those include:
+- An approximate aggreg...
+- **[Integrated Multi-Modal Search: Generate and Search Image Vectors Directly in Elasticsearch](https://github.com/elastic/roadmap/issues/183)**
+  - ## Value proposition
+
+By integrating multimodal models into the Inference API, we are changing what "search" means for a developer using Elastic. For the first time, developers can generate multi-modal vectors within Elastic for applications that perform sophisticated multi-modal search, like searching images with text, by using the same single, seamless and intuitive Elasticsearch Inference AP...
+- **[Improved datetime picker for faster incident response and data analysis](https://github.com/elastic/roadmap/issues/182)**
+  - **What the feature is**
+An overhaul of the Kibana datetime range selector (in Discover, Dashboards, etc.) to help users be more efficient in troubleshooting observability and security incidents. 
+
+**Value Proposition**
+The improved timepicker reduces the time spent configuring a time range and accelerates incident response and data exploration. By allowing users to save and share time range pre...
+- **[Browser locale language support in Kibana](https://github.com/elastic/roadmap/issues/181)**
+  - **What the feature is**
+Browser Locale Language allows users to view the Kibana interface in their preferred language (French, German, Japanese, Chinese, or English) by automatically detecting and applying the setting configured in their web browser, without having to configure a .yml file. 
+
+**Value Proposition**
+Currently, global organizations are forced to default all users to English, despi...
+- **[Introduce Value Reports in Elastic Cloud Hosted](https://github.com/elastic/roadmap/issues/180)**
+  - ### **Value Reports**
+
+**Value proposition**  
+Value Reports help customers quantify the impact of Elastic Security by showcasing real tangible business value and return on investment in terms of time and money saved.
+
+---
+
+**Expected outcome**  
+Customers can easily understand and communicate the value Elastic Security delivers to their organization.  
+The feature drives helps justifies invest...
+- **[Attack Discovery API](https://github.com/elastic/roadmap/issues/178)**
+  - **What the feature is**: Attack Discovery API
+
+**Value proposition**: Attack Discovery can now be triggered programmatically, via any automation platform or tooling that users wish. This API also includes the ability to update workflow state, sharing options, and much more, giving users the freedom to automate any of this functionality. 
+
+**Expected outcome**: Whilst users enjoy leveraging Atta...
+- **[Draft Cases](https://github.com/elastic/roadmap/issues/174)**
+  - Introduces a "Draft" state for cases, providing a dedicated space for initial triage and evidence collection before a formal incident is declared.
+
+**Value proposition**
+Decouples the act of investigating from the act of declaring an incident. This allows teams to safely separate "signal" from "noise," ensuring that low-confidence investigations do not pollute critical metrics like Mean Time to...
+- **[Entity Analytics - Entity Graph](https://github.com/elastic/roadmap/issues/170)**
+  - **Problem Statement**
+Security investigations are often slow, siloed, and event-centric. Analysts must manually pivot between disparate logs (process, network, authentication, etc) to piece together an attacker's actions. This makes it difficult to quickly determine the full scope (blast radius), root cause, relationships and attack path of a security incident.
+
+**Value proposition**
+We will pr...
+- **[Flexible Case Templates](https://github.com/elastic/roadmap/issues/169)**
+  - This feature will introduce a flexible and user-defined templating system for Cases. Administrators will be able to create, manage, and customize case templates to fit their specific operational workflows, moving beyond the current one-size-fits-all model.
+
+**Value proposition**
+This update will allow organizations to tailor investigative workflows to their specific needs. Security teams can en...
+- **[Detection rule changes history](https://github.com/elastic/roadmap/issues/168)**
+  - **Value proposition**
+Allow user to review previously saved rules modifications to see who made which changes at the specific moment.
+
+**Expected outcome**
+User will be able to see a timeline of saved rule modifications and review which changes were made.
+- **[Convert Lens visualizations to ES|QL](https://github.com/elastic/roadmap/issues/165)**
+  - **What the feature is** 
+
+Convert Lens visualizations to ES|QL
+
+**Value proposition**
+Lens visualizations are the most popular way for users to explore and analyze data in Kibana because of their simplicity and user-friendly interface. However, these visualizations cannot get advantage of powerful must-have features that are only available for ES|QL, such as variable controls or advanced analys...
+- **[Enhanced Insight and Usability for Kubernetes OOTB Dashboards](https://github.com/elastic/roadmap/issues/164)**
+  - **What the feature is (as Title)** Enhanced Insight and Usability for Kubernetes OOTB Dashboards
+
+We are reimagining the Kubernetes OOTB dashboards to deliver enhanced insight and a superior user experience. Our focus is on better usability, navigability, structure based on key use cases, and visual consistency. This ensures users can quickly answer their most frequent questions, understand clu...
+- **[Dynamic Alert Risk Score](https://github.com/elastic/roadmap/issues/162)**
+  - **Background**
+Currently, the alert risk score is a static attribute assigned to the rule, similar to a severity (critical, high, medium, low), but a number vs a keyword to enable sorting for those users that customize the score.
+
+**Value proposition**
+
+We will provide Dynamic Risk Score that accounts for all the Entities within an alert as well as other activities for alert prioritization. Thi...
+- **[Entity Analytics - Personalized Entity Retrohunting Recommendations](https://github.com/elastic/roadmap/issues/161)**
+  - **Roadmap Future - Personalized Entity Retrohunting Recommendations**
+
+**Value proposition**
+
+Empower analysts to hunt with confidence by providing clear, actionable guidance that connects new threats to your organization's specific historical behaviors and environmental context.
+- **[Entity Analytics - Watchlist](https://github.com/elastic/roadmap/issues/158)**
+  - **Background:**
+
+The Watchlist feature provides a way for analysts to manually tag and monitor high-risk entities. Besides alerts, security teams often have known risks they must monitor. These can include privilege administrators, C-level executives (high value targets), Departing Employers (potential insider threats), or concerning behaviors from machines or AI Agents.
+
+**Value proposition**
+...
+- **[Entity Analytics - Historical Context Changes & Behavioral Baseline](https://github.com/elastic/roadmap/issues/157)**
+  - **Problem**
+To investigate effectively, analysts need immediate context on why a specific entity behavior was flagged as anomalous.
+
+Using a "New Country Login" anomaly for user "John Doe" as an example:
+
+Required Context: The analyst must immediately see the baseline behavior (e.g., "Baseline Country: USA") directly compared against the anomalous event (e.g., "Anomalous Login: Brazil").
+Withou...
+- **[AI-Driven Entity Analytics](https://github.com/elastic/roadmap/issues/156)**
+  - **Background:**
+
+Entity Analytics represent the key pieces of information involved in a security incident in a SIEM. They are the “who”, “what”, “where”, and “when” of any research, hunt or investigation providing crucial context for effective response. Entities are objects in every modern SIEM and can include users, hosts, files, network artifacts, threat intelligence, vulnerabilities and much...
+- **[Query Streams and Draft Mode](https://github.com/elastic/roadmap/issues/149)**
+  - ### Value proposition:
+
+Users need more flexibility in how they organize, view, and process their data. Sometimes they need to create custom, reusable views that span multiple data sources (e.g., "all production errors"), or filter a single source. 
+
+Other times, they need to safely test new ingest-time processing and partitioning rules without risking production data. This feature introduces t...
+- **[Logs Streams](https://github.com/elastic/roadmap/issues/148)**
+  - ### Value proposition:
+
+Observability, security, and platform engineers need a simple, consistent, and scalable way to manage their log data. Today, this often requires manually configuring and maintaining complex index templates, ingest pipelines, and retention policies across many disparate data sources, which is error-prone and time-consuming. 
+
+Logs Streams provide an opinionated, managed, ...
+- **[Intelligent Asset Suggestions and AI Generation](https://github.com/elastic/roadmap/issues/147)**
+  - ### Value proposition:
+
+When users add data to a stream, they often face a "blank slate" problem, requiring manual effort to build relevant dashboards, processing rules, and alerts. This feature provides an AI-powered assistant to solve this. It will proactively analyze data and make deterministic suggestions from a knowledge base (e.g., "This looks like Nginx data, apply this dashboard?"). Fur...
+- **[Improved memory monitoring for vector use cases](https://github.com/elastic/roadmap/issues/145)**
+  - **What the feature is and who it’s for**
+
+Aside from monitoring the Elasticsearch JVM heap memory, AutoOps now monitors the system (i.e. so-called off-heap) memory in order to ensure that users relying on hybrid and semantic search get notified proactively before experiencing performance degradations when searching through vector data.
+
+**Value proposition**
+
+Users' confidence on hybrid and sem...
+- **[Open API for AutoOps data](https://github.com/elastic/roadmap/issues/144)**
+  - **What the feature is and who it’s for**
+
+AutoOps now offers a way to retrieve insights and recommendations through an open API, which unlocks many new opportunities for all users eager to get access to AutoOps data in a programmatic way.
+
+**Value proposition**
+
+AutoOps-derived intelligence and insights are now available for users to build upon. Exported AutoOps data can now be consumed in a nu...
+- **[Serverless monitoring with AutoOps - EIS Tier](https://github.com/elastic/roadmap/issues/142)**
+  - **What the feature is and who it’s for**
+The EIS Tier view in AutoOps for Elastic Cloud Serverless provides visibility into how inference performance, and token usage, helping users understand how inference activities impact overall project efficiency and usage.
+
+This capability is designed for Serverless users running inference workloads who want to track their token consumption, optimize perf...
+- **[Serverless monitoring with AutoOps - Indexing Tier](https://github.com/elastic/roadmap/issues/140)**
+  - **What the feature is and who it’s for**
+AutoOps for Elastic Cloud Serverless provides built-in views that show how project performance impacts compute and storage usage. The Search Tier view and Search AI Lake view help users understand how search activity, ingest, and retention affect VCUs and storage costs.
+
+The new Indexing Tier view adds visibility into how indexing performance influences ...
+- **[Dashboard usage analytics in Kibana](https://github.com/elastic/roadmap/issues/138)**
+  - **What the feature is** 
+
+Dashboard usage analytics in Kibana
+
+**Value proposition**
+
+Learn how often your dashboards are being used--and by who to help better enable your end users.
+
+**Expected outcome**
+
+* Optional dataset that can be enabled that generates usage data for dashboards
+* Included out of the box dashboard for analyzing this usage data
+- **[PromQL support in ES|QL](https://github.com/elastic/roadmap/issues/137)**
+  - **What the feature is**
+
+Enhanced support and tooling within the ES|QL editor to enable the construction of advanced time-series analysis queries, achieving functional parity with sophisticated metric query languages, including PromQL. This focuses on making complex calculations, like rates over time and pipelined aggregations, seamless and discoverable within the editor.
+
+**Value proposition**...
+- **[Create dashboards with natural language in chat](https://github.com/elastic/roadmap/issues/136)**
+  - **What the feature is** 
+
+Create dashboards with natural language in chat
+
+**Value proposition**
+Users will be able to explore their data by asking the chat questions in natural language. The chat can leverage dashboards and visualizations as inputs for the reasoning agent as well as outputs when they are the most effective response, dramatically reducing the time-to-insights and eliminating th...
+- **[Schedule alert rule execution](https://github.com/elastic/roadmap/issues/135)**
+  - **What the feature is** 
+
+Schedule alert rule execution
+
+**Value proposition**
+
+Precisely manage alert rule execution on a schedule that's simple to configure within Kibana.
+
+**Expected outcome**
+
+* Schedule configuration inside of alert rules
+- **[Per user authentication support in Kibana connectors](https://github.com/elastic/roadmap/issues/134)**
+  - **What the feature is** 
+
+Per use authentication support in Kibana connectors
+
+**Value proposition**
+
+For some 3rd party systems, you want to connect as the user and not a system account for personalized access.
+
+**Expected outcome**
+
+* Kibana connectors support per-user authentication modes
+- **[Unify Observability and stack alerts](https://github.com/elastic/roadmap/issues/133)**
+  - **What the feature is** 
+
+Unify Observability and stack alerts
+
+**Value proposition**
+
+"Best of both worlds" between Observability Alerting functionality and Stack Alerts. Easier to manage alerts more quickly without locking some functionality in one page versus another.
+
+**Expected outcome**
+
+* Consolidated Stack and Observability Alerts and Rules Management experience
+- **[Manage alerts tasks with AutoOps](https://github.com/elastic/roadmap/issues/132)**
+  - **What the feature is** 
+
+Manage alerts tasks with AutoOps
+
+**Value proposition**
+
+Visualize and automatically manage alert engine task execution without having to crawl through logs and manage settings in different places.
+
+**Expected outcome**
+
+* Configure AutoOps for Task Manager
+* Improve health of Task Manager automatically.
+* Improve visibility of Task Manager health.
+- **[AutoOps for air-gapped environments](https://github.com/elastic/roadmap/issues/131)**
+  - **What is the feature and who it is for?**
+AutoOps for air-gapped environments is an advanced monitoring, diagnostics, and optimization solution built for administrators running the Elastic Stack in secure, isolated environments, including Elastic Cloud on Kubernetes (ECK), Elastic Cloud Enterprise (ECE), or bare-metal installations. It is designed specifically for organizations with strict reg...
+- **[Search Analytics Logs](https://github.com/elastic/roadmap/issues/130)**
+  - **What the feature is and who is it for**
+The new Search Analytics Logs capability is designed for administrators and search managers who need deeper visibility into the performance, usage, and sources of search queries within their Elasticsearch environments. This feature provides comprehensive logging of search queries, including both DSL and ES|QL types. Administrators can now monitor histor...
+- **[Search Management Dashboard in AutoOps](https://github.com/elastic/roadmap/issues/127)**
+  - **What the feature is and who it's for:**
+The Search Management Dashboard is designed for administrators who need greater visibility and control over queries running in their Elasticsearch clusters. It provides a centralized interface that highlights long-running queries, making it easier for admins to identify and manage queries that could impact cluster performance. Currently, these capabilit...
+- **[Search Management Dashboard in Kibana](https://github.com/elastic/roadmap/issues/126)**
+  - **What the feature is and who it's for:**
+Administrators often face challenges in identifying and managing queries that take longer to execute and can impact cluster performance. Additionally it is hard to track the source of those queries and who submitted them. Currently, locating these queries and acting upon them requires correlating multiple sources including the tasks API and query logs.
+...
+- **[Lovable, Relevant Service Map](https://github.com/elastic/roadmap/issues/124)**
+  - **What the feature is and who it's for**
+An improved service dependency visualization system designed for platform teams and architects who need to understand and monitor complex service relationships in large environments.
+
+**Value proposition**
+Provide efficient visualization and navigation of service dependencies for large environments, with support for embedding service maps in custom dashb...
+- **[SLO-Health at a Glance for APM](https://github.com/elastic/roadmap/issues/123)**
+  - **What the feature is and who it's for**
+View the state of APM SLOs directly in your service inventory and service views so investigators can quickly understand which services are degraded at glance. 
+
+**Value proposition**
+During an investigation, understanding which services have SLOs which need attention can help identify problematic dependencies faster and restore service health.
+
+Investiga...
+- **[Canvas layout options in Dashboards](https://github.com/elastic/roadmap/issues/118)**
+  - **What the feature is** 
+
+Canvas layout options in Dashboards
+
+**Value proposition**
+
+Create pixel perfect fixed dashboard layouts that always looks the exact same when viewed and is optimal for large displays. Enable custom rich information displays that integrate internal business process diagrams and data from Elasticsearch.
+
+**Expected outcome**
+
+* Fixed layout modes in dashboards
+* Create ...
+- **[Customize the solution navigation in Kibana](https://github.com/elastic/roadmap/issues/117)**
+  - **What the feature is**
+Customize the solution navigation in Kibana allows users to re-order or hide menu items from the left-hand solution navigation on Serverless or when solution views are enabled in ECH / on-prem.
+
+**Value Proposition**
+This feature is designed for users who need to quickly access the menu items they use most. Currently, the solution navigation can be cluttered with many ap...
+- **[Serverless Cross Project Search: Users can control which linked projects to include in their Cross-project search query using user-friendly attributes](https://github.com/elastic/roadmap/issues/116)**
+  - To improve query performance and relevance, users need an intuitive way to filter which linked projects are included in a search, rather than relying on cryptic identifiers. CPS introduces project routing based on business-friendly metadata tags defined by default (like the project region or cloud provider), or defined by the user (like env:prod or `team:security). This scope is managed via a K...
+- **[More flexible CCS version compatibility between clusters](https://github.com/elastic/roadmap/issues/115)**
+  - Customers with multiple clusters connected together via CCS struggle with planning stack upgrades The current version compatibility model requires customers to upgrade the local cluster last. As a result, the central/local cluster might end up remaining on an older, potentially vulnerable version of the stack because remotes are not upgraded yet.
+
+Customers solve this today by maintaining a ded...
+- **[Admins have insights about CCS queries health and performance via dashboard and alerts](https://github.com/elastic/roadmap/issues/114)**
+  - Customers with multiple remote clusters, prevalent in enterprise, government, and Security Solution users, using CCS need to offer a reliable and performant search/dashboard service to their users. To achieve that, they need visibility into CCS queries' health and performance.
+
+Today, some customers make their own dashboards and find crafty solutions to gather some data on the CCS queries or re...
+- **["Tailing" in Discover](https://github.com/elastic/roadmap/issues/113)**
+  - **What the feature is** 
+
+"Tailing" in Discover: An optional Tail Mode (Live Streaming) configuration in the Discover table that allows users to continuously append and view new documents in near real-time, similar to watching a live stream of logs.
+
+**Value proposition**:
+
+This feature is designed for users who require real-time monitoring of logs and metrics. Currently, monitoring a live stre...
+- **[CCS support in all new ES|QL features and functions: INLINE STATS, FORK, RERANK, COMPLETION](https://github.com/elastic/roadmap/issues/112)**
+  - The new ES|QL features INLINE STATS, FORK, RERANK, and COMPLETION do not support Cross-cluster queries. This is limiting their use by customers relying on CCS for all of their queries. All ES|QL features and functions must support CCS, so these features cannot go GA without CCS support.
+- **[Streamstats in ES|QL: running statistics over time windows](https://github.com/elastic/roadmap/issues/111)**
+  - **Streamstats in ES|QL provide running statistics over time windows**
+
+**Value Proposition**
+
+Add dynamic statistical calculations to each individual event as it is processed, based on preceding events or specific groupings. This command allows you to enrich your data with running totals, averages, and counts without altering the event structure, providing immediate context for trend analysis, ...
+- **[ESQL query analyzer: Get detailed insights into execution profile of ESQL queries](https://github.com/elastic/roadmap/issues/110)**
+  - **What the feature is (as Title)**
+
+**Value proposition**
+
+**Expected outcome**
+
+**Optional: Key user stories / use cases**
+- **[ES|QL: Effectively search unmapped data](https://github.com/elastic/roadmap/issues/108)**
+  - ## Value Prop
+
+Today it is very hard to access and analyze data that reside in unmapped fields as both `_search` and ES|QL require fields to be mapped in order to be used in queries. Having not fully mapped data more often happens with logs, which are often unstructured and composed of too many variations of fields. Users have to parse each field that they want to be able to search and analyze....
+- **[Filter multivalue fields by multiple criteria](https://github.com/elastic/roadmap/issues/107)**
+  - **What the feature is (as Title)**
+
+**Value proposition**
+
+**Expected outcome**
+
+**Optional: Key user stories / use cases**
+- **[Lookup IP database information in ES|QL queries](https://github.com/elastic/roadmap/issues/106)**
+  - **What the feature is**
+Dynamic Geographical Enrichment of IP Addresses at Query Time
+
+**Value Proposition**
+
+Instantly add geographical details (such as country, city, and coordinates) to IP addresses directly within your search queries. This command provides immediate geographical context for network activity and enables location-based analysis and visualization on demand, offering greater fl...
+- **[Dedup command: Filter out or dedup duplicate data in ES|QL queries](https://github.com/elastic/roadmap/issues/105)**
+  - **Dedup command: Filter out or dedup duplicate data in ES|QL queries**
+
+**Value proposition**
+
+Sometimes the processing stages of a query can result in duplicate data. Users want to remove the events that contain an identical combination of values for the fields that they specify. This enables more precise and relevant data results by identifying and removing duplicate events or documents accor...
+- **[Stateless for Self-Managed: Easier to operate, reduced indexing costs](https://github.com/elastic/roadmap/issues/104)**
+  - **Description:** 
+
+This outcome solves the critical problem of high TCO and inflexible scaling for large, self-managed deployments. Building upon segment-based replication, it allows Self-Managed customers to use low-cost object storage (e.g., S3, GCS, Azure Blob) as the system of record and scale indexing and search compute resources independently. This dramatically reduces indexing costs and ...
+- **[Split view in Discover](https://github.com/elastic/roadmap/issues/102)**
+  - **What the feature is** : 
+
+A new Split View capability within the Discover workspace that allows users to view and interact with two independent sets of data, or two different queries, side-by-side in the same browser tab. This feature works with the existing Discover Tabs system. 
+
+**Value proposition**:
+
+This feature targets analysts and developers who need to compare multiple datasets or qu...
+- **[ECH/self-managed agents can send data to Serverless projects](https://github.com/elastic/roadmap/issues/101)**
+  - **What the feature is and who it’s for**
+ECH/self-managed agents can send data to multiple deployments, for example to an external monitoring cluster. Unfortunately it's not possible to target a Serverless project for that, because of technical limitations due to the different nature of the new offering.
+
+We want existing ECH/self-managed customers to configure a remote Serverless project as th...
+- **[GitOps for Kibana content: new OAS APIs and terraform resources for dashboards, visualizations, maps, and more](https://github.com/elastic/roadmap/issues/100)**
+  - **What the feature is** 
+
+GitOps for Kibana content: new OAS APIs and terraform resources for dashboards, visualizations, maps, and more
+
+**Value proposition**
+
+The current process for managing and deploying dashboards across multiple environments—such as development, staging, and production—and across various regional deployments is highly manual, time-consuming, and prone to inconsistency. Ea...
+- **[Easy setup for RCS2.0 Strong Identity Verification via Kibana UI](https://github.com/elastic/roadmap/issues/99)**
+  - **What the feature is and who it’s for**
+RCS2.0 Strong Identity Verification introduces the information about the remote identity in the cross-cluster API key.
+This information can be passed when creating the API key, and is returned when API keys are listed.
+
+Kibana administrators should have a simple key management in Kibana to specify this information and to read it back in the UI.
+
+**Value ...
+- **[Blend relevance signals with Hybrid Search in ES|QL with FORK and FUSE](https://github.com/elastic/roadmap/issues/97)**
+  - **What the feature is**
+Simple Hybrid Search in ES|QL using the FORK and FUSE commands, enabling Reranking with Reciprocal Rank Fusion (RRF) and Linear Combination.
+
+**Value proposition**
+Users currently struggle to combine the results from different types of searches—like keyword-based full-text search and vector-based semantic search—into a single, unified, and highly relevant result set. Thi...
+- **[Improving ES|QL search performance](https://github.com/elastic/roadmap/issues/96)**
+  - ## External Product Outcome
+Search in Elasticsearch context relates to the retrieval of individual documents, sorted by a particular order. The most important thing is to get the right documents, but a close second is getting them quickly. In recent months we reduced ES|QL query latency by tens of percents.
+- **[Geospatial support in ES|QL: Hash, Tile, and Hex Support for geo_shape](https://github.com/elastic/roadmap/issues/94)**
+  - ## External Product Outcome Title for Q3
+Hash, Tile, and Hex Support for geo_shape in ES|QL
+
+## External Product Outcome
+Having a query language that is simple to learn and use simplifies the usage and the learning curve, saves time, and reduces cost. ES|QL brings all of that in addition to new capabilities like joins. Geo users now enjoy in ES|QL the majority of query functionality that they h...
+- **[Improve LogsDB storage efficiency and query performance](https://github.com/elastic/roadmap/issues/91)**
+  - ## External Title
+
+Improve performance for storing and querying logs data (LogsDB)
+
+## Value Prop
+
+Logs are essential for observability, providing the detailed context needed for root cause analysis. However, their high volume and unstructured nature make them disproportionately expensive to store and slow to query. This forces teams to choose between retaining complete data for investigations ...
+- **[TSDB++ - Improve storage efficiency, ingestion throughput and query latency](https://github.com/elastic/roadmap/issues/90)**
+  - ## External Title
+
+Improve performance for storing and managing metrics data (TSDB)
+
+## Value Prop
+
+Observability teams rely on metrics to monitor system health and diagnose production incidents. The high volume of this data forces a trade-off between storage costs, data completeness, and the speed of analysis during an outage. This means teams often have to limit monitoring to critical service...
+- **[Improve downsampling - Full ESQL support and coverage of counters and histograms](https://github.com/elastic/roadmap/issues/89)**
+  - ## External Title
+
+Improve downsampling - Full ESQL support and coverage of counters and histograms
+
+## Value Prop
+
+Metrics tools and solutions collect large amounts of time series data over time. As the data ages, it becomes less relevant to the current state of the system. Downsampling reduces the storage footprint of time-series data by storing it at reduced granularity, while, at the same t...
+- **[DiskBBQ: Disk friendly vector search algorithm with binary quantization](https://github.com/elastic/roadmap/issues/86)**
+  - **External Title**
+DiskBBQ - The disk friendly vector search algorithm
+
+**External Product Outcome**
+DiskBBQ is a new algorithm for indexing and searching dense vectors, which is becoming the new default option in Elasticsearch. Compared with the previous default (HNSW using BBQ), DiskBBQ offers a competitive query latency and recall, an order of magnitude better indexing performance, and most ...
+- **[Generate ES|QL with natural language in Kibana](https://github.com/elastic/roadmap/issues/85)**
+  - **What the feature is**
+
+Generate ES|QL with natural language in Kibana. This feature will introduce an in-context Natural Language Processing (NLP) capability directly within the Kibana ES|QL editor. Users will be able to type a question in plain English, and the system will generate the corresponding ES|QL query, replacing their prompt in the editor.
+
+**Value proposition**:
+
+This feature help...
+- **[Variable controls for index pattern in ES|QL (FROM ?index)](https://github.com/elastic/roadmap/issues/84)**
+  - **What the feature is** 
+
+Variable controls for index pattern in ES|QL (FROM ?index)
+
+**Value proposition**:
+
+This feature targets users who create dashboards with ES|QL visualizations over data that is partitioned into multiple index patterns or streams. The main problem today is that users must create and maintain duplicate dashboards to run the same query logic against different data sources...
+- **[ES|QL controls from ?index](https://github.com/elastic/roadmap/issues/83)**
+  - **What the feature is (as Title)** ES|QL controls from ?index
+
+**Value proposition**
+
+**Expected outcome**
+
+**Optional: Key user stories / use cases**
+- **[ES|QL controls from ?index](https://github.com/elastic/roadmap/issues/82)**
+  - **What the feature is (as Title)** ES|QL controls from ?index
+
+**Value proposition**
+
+**Expected outcome**
+
+**Optional: Key user stories / use cases**
+- **[Browse indexes and fields by type in ES|QL editor](https://github.com/elastic/roadmap/issues/80)**
+  - **What the feature is**:
+
+A new, interactive, in-context browser for indices and fields that is directly integrated into the ES|QL query editor. This feature eliminates the need to leave your current workflow or disrupt your query to find the data you need. 
+
+**Value proposition**:
+
+This feature is designed for users who frequently write and edit ES|QL queries but lack immediate access to schem...
+- **[Read-only dashboards sharing](https://github.com/elastic/roadmap/issues/78)**
+  - **What the feature is (as Title)** Read-only dashboards sharing
+
+**Value proposition**
+
+**Expected outcome**
+
+**Optional: Key user stories / use cases**
+- **[Google Private Service Connect support in Elastic Cloud Serverless](https://github.com/elastic/roadmap/issues/76)**
+  - **What the feature is and who it's for:** This is a new capability allowing customers to establish secure, private network connections to their Serverless projects, using Google Private Service Connect, to ensure data traffic bypasses the public internet. This feature is designed for enterprise customers, particularly those in regulated industries or with strict corporate security policies that...
+- **[Freely place ES|QL dashboard controls](https://github.com/elastic/roadmap/issues/75)**
+  - **What the feature is (as Title)** Freely placable ES|QL controls
+
+**Value proposition**
+
+**Expected outcome**
+
+**Optional: Key user stories / use cases**
+- **[Azure Private Link support in Elastic Cloud Serverless](https://github.com/elastic/roadmap/issues/73)**
+  - **What the feature is and who it's for:** This is a new capability allowing customers to establish secure, private network connections to their Serverless projects, using Azure Private Link, to ensure data traffic bypasses the public internet. This feature is designed for enterprise customers, particularly those in regulated industries or with strict corporate security policies that prohibit da...
+- **[Fine-grained log delivery controls in Elastic Cloud](https://github.com/elastic/roadmap/issues/72)**
+  - **What the feature is and who it’s for**
+
+This feature introduces flexible logging controls for Elastic Cloud users who want more granular control over how their Hosted deployment and Serverless project logs are managed. It’s designed for administrators and DevOps teams looking to reduce storage overhead, improve visibility, and align log management with their operational and compliance needs.
+...
+- **[AWS PrivateLink support in Elastic Cloud Serverless](https://github.com/elastic/roadmap/issues/71)**
+  - **What the feature is and who it's for:** This is a new capability allowing customers to establish secure, private network connections to their Serverless projects, using AWS PrivateLink, to ensure data traffic bypasses the public internet. This feature is designed for enterprise customers, particularly those in regulated industries or with strict corporate security policies that prohibit data ...
+- **[Subquery support in ES|QL language and Kibana editors](https://github.com/elastic/roadmap/issues/68)**
+  - **What the feature is (as Title)** Subquery support in ES|QL language and Kibana editors
+
+**Value proposition** 
+
+**Expected outcome**
+
+**Optional: Key user stories / use cases**
+- **[Replace proprietary RUM Agent with new OTel-based Javascript SDK](https://github.com/elastic/roadmap/issues/67)**
+  - **Value proposition**
+This feature will provide an Elastic Distribution of OpenTelemetry version of the [OpenTelemetry JavaScript SDK](https://opentelemetry.io/docs/languages/js/), providing the ability to use the OpenTelemetry JavaScript SDK to provide RUM instrumentation data to Elastic Observability. The capabilities targeted for the initial work are to as closely match the data types that e...
+- **[Serverless users can search across multiple projects](https://github.com/elastic/roadmap/issues/65)**
+  - **Value proposition**
+
+Cross-Project Search (CPS) is a foundational feature reimagined for the Elastic Serverless platform, enabling Enterprise customers to seamlessly unify data scattered across multiple projects. This capability is critical for architectural requirements such as data residency, scalability, cost optimization, and tenant isolation. 
+
+The core value propositions delivered by CP...
+- **[ES|QL Lookup Join functionality equivalent to Enrich for usage at query time](https://github.com/elastic/roadmap/issues/64)**
+  - **Value Proposition**
+
+ES|QL added support for join-like operations early on with ENRICH, as it was convenient to reuse the existing ENRICH infrastructure from ingest pipelines. However, as ENRICH was optimised for ingest time lookups and small datasets that don’t change often, it has a poor UX with many commonly reported limitations when it is used for query time lookups as in ES|QL. To addres...
+- **[ES|QL name qualifiers to manage duplicated column names in a query](https://github.com/elastic/roadmap/issues/62)**
+  - Name qualifiers
+
+Value Proposition
+
+As ES|QL gains more ways to analyse and correlate multiple datasets in one query, like joins, views, and subqueries, there becomes a need to resolve or prevent field name conflicts and ambiguities. For example, a lookup index used with Lookup Join might have fields with the same names as fields in the source index of FROM. A subquery could return fields confl...
+- **[ES|QL subquery: Enable multi-phased analytics with query within a query](https://github.com/elastic/roadmap/issues/60)**
+  - **Value Proposition**
+
+​​Analysts and engineers striving for deep, actionable insights often need to perform complex data correlations and multi-stage investigations. Their analytical process is frequently iterative; the results of one exploratory query often dictate the parameters or focus of subsequent queries. This requires a way to chain analytical steps, using dynamically generated lists o...
+- **[Admins can view and manage long running queries](https://github.com/elastic/roadmap/issues/59)**
+  - **Value Proposition**
+
+Administrators often face challenges in identifying and managing queries that take longer to execute and can impact cluster performance. Additionally it is hard to track the source of those queries and who submitted them. Currently, locating these queries and acting upon them requires correlating multiple sources including the tasks API and query logs.
+
+**Expected outcome...
+- **[Process very large data and result sets with ES|QL](https://github.com/elastic/roadmap/issues/57)**
+  - **Value Proposition**
+
+Users with large datasets sometimes need to return more rows from a query than ES|QL allows. We're currently constrained to the amount of available Java heap memory as we lack features like Spill to Disk. Without pagination, increasing the LIMIT just creates a larger response object putting more stress on the network and the client, such as Kibana. We need to be able to r...
+- **[Time series data can efficiently display in the expected order](https://github.com/elastic/roadmap/issues/56)**
+  - **Value Proposition**
+
+Users searching logs and metrics data in Kibana typically want to see the results in timestamp order (newest first) by default, to see the most relevant data first. This is already true when using KQL/DSL in Kibana Discover. With ES|QL, we can return results quickly when they are unsorted, but sorting adds considerable overhead and latency.
+
+**Expected Outcomes**
+
+Sorting...
+- **[Search flattened fields in ES|QL to avoid mapping explosion](https://github.com/elastic/roadmap/issues/53)**
+  - **Value Proposition**
+
+Elasticsearch's flattened field type is sometimes used for indexing objects with a large or unknown number of unique keys, such as AWS Cloudtrail logs. This avoids mapping explosion by having one field where there might otherwise be tens of thousands of fields. ES|QL does not yet support the flattened field type.
+
+**Expected Outcome**
+
+Users will be able to retrieve field...
+- **[Lens charts that use Top N nested aggs get faster with ES|QL](https://github.com/elastic/roadmap/issues/52)**
+  - **Value Proposition**
+
+Lens has an extremely popular feature "Breakdown" by "Top X values of ". These can be nested in multiple layers, for example "Top 3 error codes from the 5 servers with the most log entries, in hourly buckets". This relies on hierarchical aggregation capability of our classic aggregations framework that ES|QL does not yet offer. If we support this with ES|QL we should be a...
+- **[Interact with data through ES|QL in my desired timezone](https://github.com/elastic/roadmap/issues/51)**
+  - **Value Proposition**
+
+Kibana supports a timezone configuration per space. This default setting is set to “Browser” which is dynamic to the browser’s current time zone. Kibana users authoring DSL-powered panels that use a date histogram get query-time histogram buckets that honor the setting. This is not possible with ES|QL until ES|QL has support for timezones.
+
+**Expected Outcomes**
+
+ES|QL re...
+- **[Enabling Direct Data Migration with Reindex from Remote for Serverless](https://github.com/elastic/roadmap/issues/50)**
+  - **Description:**
+To provide greater feature parity with other Elastic deployment models and address a key requirement for data mobility, we are enabling the **Reindex from Remote** API for Elastic Serverless. This feature delivers a direct, server-side mechanism for moving data from a source Elasticsearch cluster into a Serverless project.
+
+As a well-established Elasticsearch capability, Reinde...
+- **[Materialized Views: Accelerate queries by defining automatically refreshing, pre-calculated views](https://github.com/elastic/roadmap/issues/49)**
+  - **Value Proposition**
+
+Queries can get complex and can take longer to run than a user loading a dashboard would like to wait. For popular queries used frequently in dashboards or alerting and detection rules, it pays to accelerate them by pre-calculating the results, like we do with Transforms. Views can store a query for easy reuse, and by automatically running the view on a recurring basis, M...
+- **[Logical Views: Users can define and reuse named query definitions](https://github.com/elastic/roadmap/issues/48)**
+  - **Value Proposition**
+
+Data teams frequently struggle with long and complex queries that are difficult to maintain, share, and reuse. This complexity leads to inconsistencies, errors, and wasted time, creating a roadblock to valuable insights. Critical logic for dashboards, reports, and interactive analyses often gets buried in lengthy queries, making them challenging to maintain, share, and ad...
+- **[Top metrics/ first and last aggs in ES|QL](https://github.com/elastic/roadmap/issues/47)**
+  - **Value Proposition**
+
+ES|QL lacks First/Last aggregation functions that are commonly used in observability and security use-cases in order to emit the first/last observed metric value within a time window. This is most commonly based on a timestamp ordering but it can also be useful to get the first document based on another criteria, such as a numerical size/salary/length/distance etc.
+
+**Exp...
+- **[Encryption at rest with customer-managed keys in existing Elastic Cloud deployments](https://github.com/elastic/roadmap/issues/40)**
+  - **What the feature is and who it's for:**. This feature is an essential security and compliance measure. Administrators can configure their existing Elastic Cloud Hosted deployments to use their encryption keys from AWS KMS, Azure Key Vault or Google KMS to encrypt their data and snapshots at rest and do so without downtime. Previously, encryption at rest was only supported for new deployments,...
+- **[Elastic Cloud user membership in multiple Elastic Cloud organizations](https://github.com/elastic/roadmap/issues/39)**
+  - **What the feature is and who is it for**
+All Elastic Cloud users can belong to multiple Elastic Cloud organizations and seamlessly switch between them. Previously, each user could only belong to one organization and had to leave their current organization to join a different one.
+
+**Value proposition**
+This enhancement enables every user to be part of multiple organizations with their unique e...
+- **[Audit trail for your Elastic Cloud organization](https://github.com/elastic/roadmap/issues/37)**
+  - **What the feature is and who is it for**
+This feature introduces organization-wide audit logging that can be easily enabled directly from the Elastic Cloud Console UI. It’s designed for Elastic Cloud administrators and security teams who need full visibility into activity across their organization — whether through the Web UI or API — to strengthen governance, compliance, and operational overs...
+- **[Marketplace Reseller Support: Azure](https://github.com/elastic/roadmap/issues/36)**
+  - **What the feature is and who it's for:** This feature enables Elastic Cloud customers to purchase Elastic Cloud subscriptions directly through their authorized channel partners (resellers) within the Azure marketplace. This is designed for organizations that prefer to procure their cloud services and software through a specific, designated partner on Azure marketplace. Customers will receive a...
+- **[Cost forecasting and analysis in Elastic Cloud](https://github.com/elastic/roadmap/issues/35)**
+  - **What the feature is and who it's for:** This feature introduces two key cost management tools for all Elastic Cloud customers. The first provides a dynamic, projected end-of-month cost, helping to remove billing surprises due to unpredictable usage of Elastic Cloud resources. The second is the ability to view this forecast alongside your existing month-to-date usage on the usage page, providi...
+- **[New Elastic Cloud homepage surfacing key resources and intuitive navigations](https://github.com/elastic/roadmap/issues/34)**
+  - **What the feature is and who it's for:** This feature is a redesign of the Elastic Cloud homepage to create a more intuitive and organized central hub. This new experience is for all Elastic Cloud users, from those just starting a trial to experienced customers. It will introduce a clean user experience that organizes key information into helpful widgets, unifies all your resources (both Serve...
+- **[Proactive budget alerts for Elastic Cloud Serverless and Hosted usage and costs](https://github.com/elastic/roadmap/issues/33)**
+  - **What the feature is and who it's for:** This new feature introduces Elastic Cloud cost alert management, which includes configurable budget alerts and automated usage summary emails.  It is designed for Elastic Cloud admins or users who need to monitor, predict, and control their organization's Elastic Cloud expenditures. Users can set granular monthly budget thresholds in Elastic Consumption...
+- **[Adding 4 Serverless Regions](https://github.com/elastic/roadmap/issues/29)**
+  - **What the feature is and who it’s for**
+We will be adding 4 more Serverless regions for customers to create Serverless projects to a region closer to them. 
+
+**Value proposition**
+With Elastic Cloud Serverless, customers can now deploy closer to your users and data — reducing latency, supporting data residency and compliance requirements, and simplifying multicloud operations. Whether you're b...
+- **[Axonius Integration](https://github.com/elastic/roadmap/issues/26)**
+  - **What the feature is**: Axonius Cyber Asset Management Integration
+
+**Value proposition**: Syncs asset intelligence from Axonius into Elastic, providing unified visibility across devices, identities, applications, SaaS, and exposures spanning hybrid cloud, on-prem, and OT environments - enabling advanced threat hunting, asset inventory management, and security gap analysis with pre-normalized ...
+- **[Forescout Integration](https://github.com/elastic/roadmap/issues/25)**
+  - **What the feature is**: Forescout Comply-to-Connect integration for device visibility and network access control.
+
+**Value proposition**: Provides continuous, agentless visibility into all network-connected devices (IT, IoT, OT) with real-time device properties, compliance status, and security posture - enabling correlation of asset context with security events for comprehensive threat detecti...
+- **[Metrics exploration in Discover](https://github.com/elastic/roadmap/issues/22)**
+  - **What the feature is and who it’s for**
+A visual, grid-based UI inside Discover for interactive metrics exploration, designed for developers, SREs, and DevOps engineers, which provides a chart-based view for metrics as opposed to the document-focused view for logs.
+
+**Value proposition**
+Users get a native metrics exploration tool within the familiar Discover interface. This reduces the need t...
+- **[Elastic Inference Service - Adding regions: 2 AWS, 2 GCP](https://github.com/elastic/roadmap/issues/18)**
+  - Jina's embedding models & ELSER are now available on new regions! 
+
++ AWS: EMEA (eu-west-1)
+
++ AWS: APJ (ap-southeast-1)
+
++ GCP: EMEA (europe-west1)
+
++ GCP: APJ (asia-south1)
+- **[Elastic Inference Service - now adding GCP](https://github.com/elastic/roadmap/issues/17)**
+  - Elastic Inference Service is available now on GCP US (us-central1) !
+- **[Multimodal search - powered by Jina](https://github.com/elastic/roadmap/issues/12)**
+  - Multimodal search - powered by https://jina.ai/models/jina-embeddings-v4/ and hosted on the Elastic Inference Service.
+- **[Semantic reranking - even higher accuracy with Jina reranking](https://github.com/elastic/roadmap/issues/11)**
+  - Boost the accuracy of your context with multilingual and multimodal semantic reranking in Elasticsearch. 
+
+**Value proposition**
+Jina's `jina-reranker-m0` model is now available on the Elastic Inference Service, accessible to customers directly through the inference API, but unlocked with ES|QL's [rerank](https://www.elastic.co/docs/reference/query-languages/esql/commands/rerank) command or the...
+- **[Semantic search with Jina multilingual embeddings](https://github.com/elastic/roadmap/issues/10)**
+  - The simplicity of Elasticsearch semantic search, but newly powered up with JinaAI multilingual embeddings, available through the Elastic Inference Service. 
+
+**Value proposition**
+jina-embedding-v3, now available on the Elastic Inference Service. Accessible as the default semantic search model. Specify data type of semantic_text on incoming data to use or through the preconfigured /_inference A...
+- **[Announcing Workflows in Elasticsearch - placeholder](https://github.com/elastic/roadmap/issues/9)**
+  - **What the feature is and who it’s for**
+
+**Value proposition**
+
+**Expected outcome / behaviors**
+
+**Optional: Key user stories / use cases**
+- **[Fully managed Elasticsearch - everywhere all at once with Cross Project Search](https://github.com/elastic/roadmap/issues/7)**
+  - **Elasticsearch serverless projects now support cross project search** 
+
+Deploy multiple Elasticsearch projects in Elastic Cloud, query all with the simplicity of one API endpoint. 
+
+**Related**
+- https://github.com/elastic/enhancements/issues/26146
+- **[Improve context management of AI Agents using Elastic Agent Builder](https://github.com/elastic/roadmap/issues/6)**
+  - Elastic Agent Builder provides a complete set of capabilities to develop secure, reliable, context-driven AI agents. 
+
+Agent Builder is introducing new capabilities for:
+- Context Management
+   - Improve tool selection with the introduction of skills 
+   - Reduce token consumption with improved in session memory store 
+- Tools
+  - Integration with [workflows](https://github.com/elastic/roadmap/...
+- **[DiskBBQ, a new default for vector search in Elasticsearch](https://github.com/elastic/roadmap/issues/4)**
+  - **DiskBBQ is now generally available and on by default for Elasticsearch vector workloads**
+
+
+
+*Related announcements* 
+- https://www.elastic.co/search-labs/blog/diskbbq-elasticsearch-introduction, first introduced in 9.2 as a technical preview 
+
+*Related PRs* 
+- https://github.com/elastic/vector-db-program/issues/43
+
+## Closed
+
+- **[Connect to external MCP with Agent Builder (Tech Preview)](https://github.com/elastic/roadmap/issues/212)**
+  - **Value proposition**
+Allow AI Agents created in Elastic to access, interact, take action in external systems with connection to external MCP servers. 
+Create new connections, import tools, create Agents with combination of Elastic built-in and custom tools and imported tools to have agents utilize data and act across systems. 
+
+Example Use Case:
+- Connect to PagerDuty MCP to get recent inciden...
+- **[Streams: AI-Powered Log Ingestion and Analysis](https://github.com/elastic/roadmap/issues/209)**
+  - **Value proposition**
+
+Site Reliability Engineers (SREs) currently struggle with log data that is too noisy, expensive, and unstructured to serve as a primary signal for troubleshooting. Streams addresses this by using AI to transform raw logs into actionable intelligence, automating the heavy lifting of data partitioning, parsing, and retention management. This empowers teams to pinpoint the r...
+- **[Improved Search and Filtering for the Case List](https://github.com/elastic/roadmap/issues/208)**
+  - This feature improves the search and filtering capabilities on the Case list page. It will expand the quick search to include more relevant case data beyond just the title and description, such as text from comments. This update will also introduce a time-range filter, allowing users to find cases created within specific timeframes (e.g., "last 7 days" or an absolute date range).
+
+**Value propo...
+- **[Alert Close with Reason](https://github.com/elastic/roadmap/issues/201)**
+  - # **Alert Close with Reason**
+
+## **Value proposition**
+
+To streamline the alert triage process, we will enhance the alert closure workflow. Currently, analysts complete their investigation or response by closing an alert and can optionally add tags or notes to document their findings. While helpful, this existing method is not a streamlined solution.
+
+By requiring analysts to select a "reason"...
+- **[Browser history and amcache osquery tables](https://github.com/elastic/roadmap/issues/196)**
+  - **Value proposition**
+Add two osquery extension tables  to Elastic’s osquery offering: browser_history (for major browsers: Chrome, Edge/Chromium, Firefox, Safari where applicable) and amcache (Windows Amcache.hve parsing). These extensions give investigators and hunters immediate, normalized access to browser navigation artifacts and executed-program history directly from Elastic-managed osque...
+- **[Windows Memory Dump response action](https://github.com/elastic/roadmap/issues/195)**
+  - **Value proposition**
+Enable Elastic Security users to remotely collect memory dumps from Windows endpoints directly through the response console, improving investigation and incident response workflows. This feature empowers analysts to perform advanced forensic analysis on volatile memory artifacts, such as injected processes, credential theft, or fileless malware.
+
+**Expected outcome**
+
+- An...
+- **[\[LLM Observability\] Amazon Bedrock AgentCore observability](https://github.com/elastic/roadmap/issues/189)**
+  - **What the feature is (as Title)**  [LLM Observability] Observability for Amazon Bedrock AgentCore
+
+**Value proposition**
+Developers and SREs who run agentic workloads on Bedrock AgentCore want to be able to understand the performance, reliability, cost and output quality. This enables them to monitor the health of their agentic workloads and have the necessary observability for quicker root ca...
+- **[Late Chunking support for JinaAI embeddings](https://github.com/elastic/roadmap/issues/188)**
+  - ## Value proposition
+
+Enable higher-relevance retrieval on long documents by adding Late Chunking support for JinaAI embeddings to the Inference API. Unlike naïve chunking -which splits first, embeds each chunk, then pools- Late Chunking embeds the full document first and then chunks based on the embedded tokens.
+
+This ordering preserves significantly more cross-chunk context, improving semanti...
+- **[One syntax to rule your models: Elastic Inference API adds more chat completions](https://github.com/elastic/roadmap/issues/187)**
+  - ## Value proposition
+
+With Elastic’s Inference API you ship AI faster, without lock-in. It integrates an array of models for embeddings, reranking, chat completions, and powers full RAG pipelines with a unified, intuitive Elasticsearch query across leading model providers. We are continuously enhancing our array of integrations. We handle the provider-specific complexity and orchestration, givi...
+- **[Terraform support for anomaly detection and datafeeds](https://github.com/elastic/roadmap/issues/184)**
+  - ## Value proposition
+
+By integrating Anomaly Detection job and datafeed management into the Elasticsearch Terraform provider, we transform what can be a slow, complex, error-prone, and manual process into an automated, auditable, and scalable "as code" workflow.
+
+Operational bottlenecks are eliminated and organizations are empowered to rapidly deploy, update, and govern their monitoring capabil...
+- **[Share AI Assistant Chats within Security](https://github.com/elastic/roadmap/issues/177)**
+  - **What the feature is**: Share AI Assistant Chats within Security
+
+**Value proposition**: With Chat Sharing, analysts can seamlessly share valuable AI Assistant conversations across their organization. This streamlines collaboration by eliminating screenshots and manual work, while ensuring proper attribution and security controls.
+
+**Expected outcome**: Customers gain faster, more auditable co...
+- **[Surface Agent Builder as an Opt In Experience](https://github.com/elastic/roadmap/issues/176)**
+  - Surface Agent Builder as an Opt In Experience
+
+**Value proposition**: Agent Builder standardizes all chat and agentic experiences under one platform, enabling faster innovation and a more consistent user experience across solutions. 
+Agent Builder us to move from a monolithic application to a decentralized model where the Security team, our customers, and our partners can build and share custom...
+- **[Unified and Searchable Case Attachments](https://github.com/elastic/roadmap/issues/175)**
+  - We are redesigning how evidence is managed in Cases. This update will replace the separate tabs for Alerts, Events, and Observables with a single, unified "Attachments" tab that consolidates all evidence into one scalable location.
+
+**Value proposition**
+In complex investigations, analysts may attach hundreds of pieces of evidence to a single case. Manually scrolling through long lists to find ...
+- **[Event Attachments for Cases](https://github.com/elastic/roadmap/issues/173)**
+  - This feature expands the Case attachment framework to allow attaching individual events, not just alerts, to a Case.
+
+**Value proposition**
+Improve investigative context by allowing analysts to attach any relevant event, providing a more complete and flexible evidence locker. This enables analysts to pinpoint and save suspicious events that may not have triggered a formal alert, ensuring all ev...
+- **[Auto-Extract Observables for Cases](https://github.com/elastic/roadmap/issues/172)**
+  - This feature will automatically identify and extract key security observables (such as agent ID, IP addresses, and file hashes) from alerts when they are added to a Case.
+
+**Value proposition**
+This update accelerates the triage and investigation process by eliminating manual data entry. This automation helps analysts save time, reduce errors, and more quickly correlate related activities. 
+
+**...
+- **[Incremental Case IDs](https://github.com/elastic/roadmap/issues/171)**
+  - This feature introduces a new, human-readable, incremental ID for all Cases across the Elastic platform.
+
+**Value proposition**
+The update streamlines case tracking, communication, and collaboration. This simplifies the user experience by providing a simple, easy-to-share identifier (e.g., "Case #123") instead of a long, complex UUID.
+
+**Expected outcome**
+
+- All new and existing cases will be ...
+- **[Automatic security rule gap remediation](https://github.com/elastic/roadmap/issues/167)**
+  - **Value proposition**
+Quicker address rule execution gaps without manual user action to reduce false negatives.
+
+**Expected outcome**
+User can setup automatic gap remediation to run the rules over execution gaps. The system automatically checks for any gaps and schedules rule executions for missed times.
+
+**Key user stories / use cases**
+- As a user, I want to ensure any intermittent gaps in ru...
+- **[Granular permissions for Detection Engineers](https://github.com/elastic/roadmap/issues/166)**
+  - **Value proposition**
+Allows admin to setup roles with different levels of privilege for managing Security Rules, Exceptions and Alerts to achieve the principle of the least privilege.
+
+**Expected outcome**
+New permissions available for users to setup desired roles.
+
+**Key user stories / use cases**
+As an admin, I want to setup roles to allow read only access to Rules, Exceptions and Alerts, se...
+- **[Entity Analytics - Privilege User Monitoring](https://github.com/elastic/roadmap/issues/163)**
+  - **Overview**
+
+Privileged user monitoring allows you to track the activity of users with elevated permissions, such as system administrators or users with access to sensitive data. These accounts are often targets for attackers who try to gain elevated privileges and access critical systems. To reduce this risk, it’s important to monitor and audit privileged users’ behavior regularly.
+
+**Value p...
+- **[Entity Analytics - Entity GenAI Highlights](https://github.com/elastic/roadmap/issues/160)**
+  - **Background**
+
+Customers require a better understanding of the users and assets they are investigating, and it can be difficult to gain a baseline understanding of an individual entity's behaviors, risk, and attributes until they have spent much time poring over singular alerts, anomaly results, and observed attributes.
+
+Aligned with the "AI-driven UEBA" initiative, we will be providing custom...
+- **[Entity Analytics - Risk Score Privilege User Risk Score Enhancements](https://github.com/elastic/roadmap/issues/159)**
+  - **Background**
+
+We are enhancing our entity risk score calculations "Bayesian model" to include privilege users.
+
+**Value proposition**
+ 
+Entity risk score will incorporate Privilege Users to in the weightings of the risk automatically.
+- **[Automatic Migration for Detection Rules: Expansion Supported Query Languages: QRadar](https://github.com/elastic/roadmap/issues/155)**
+  - **What the feature is (as Title)** Automatic Migration for Detection Rules: Expansion Supported Query Languages: QRadar
+
+**Value proposition** Add additional supported query language, IBM (QRadar), as part of the translation process to ES|QL. 
+
+**Expected outcome** This will allow for identification of data sources and basic translation from exported rules.
+- **[Entity Analytics - Entity Risk Scoring Alert Filtering](https://github.com/elastic/roadmap/issues/154)**
+  - Entity Risk Scoring Alert Filtering
+
+Background:
+
+Currently, the Entity risk engine supports custom filtering of alerts by making changes to the internal Risk scoring saved object. However, this is not something that we advertise (or recommend).
+
+**Expected outcome**
+
+We will give this option first-class support via the entity risk management settings UI, and allow customers to save that config...
+- **[Airlock Digital Integration](https://github.com/elastic/roadmap/issues/153)**
+  - **What the feature is**: Airlock Digital Integration
+
+**Value proposition**: Provides comprehensive visibility into endpoint application control and execution behavior by ingesting agent health, execution histories, and server activities from Airlock Digital, enabling security teams to monitor blocked malware/ransomware, detect policy violations, track unauthorized execution attempts, and maint...
+- **[IBM QRadar Integration](https://github.com/elastic/roadmap/issues/152)**
+  - **What the feature is**: IBM QRadar Integration
+
+**Value proposition**: Ingests security offenses from IBM QRadar SIEM into Elastic Security, enabling organizations to leverage Elastic AI SOC Engine (EASE) for enhanced analytics and automation on QRadar-detected threats while providing unified visibility across QRadar and native Elastic detections for comprehensive security operations
+
+**Expect...
+- **[Cyera Integration](https://github.com/elastic/roadmap/issues/151)**
+  - **What the feature is**: Cyera Integration
+
+**Value proposition**: Provides real-time visibility into active data security issues and policy violations across cloud data stores by ingesting unresolved issues from Cyera's data security platform, enabling security teams to monitor sensitive data exposure, classification anomalies, and compliance violations alongside other security events in Elast...
+- **[Island Browser Integration](https://github.com/elastic/roadmap/issues/150)**
+  - **What the feature is**: Island Browser Integration 
+
+**Value proposition**: Provides visibility into enterprise browser activity by ingesting user and device telemetry from Island's security-focused browser, enabling organizations to monitor web application interactions, detect risky browsing behavior, and enforce data protection policies while correlating browser-based threats with broader se...
+- **[Improved AI Suggestions for Stream Partitioning and Processing](https://github.com/elastic/roadmap/issues/146)**
+  - ### What the feature is
+
+Improved AI Suggestions for Stream Partitioning and Processing
+
+---
+
+### Value proposition
+
+Users onboarding new data often struggle with the manual effort required to partition streams and define complex processing rules like Grok patterns. Existing AI suggestions help, but can be overly specific, don't cover the full pipeline (like date parsing), or are inflexible, fo...
+- **[Information about slow ES|QL queries is available in AutoOps](https://github.com/elastic/roadmap/issues/143)**
+  - **What the feature is and who it’s for**
+
+As part of detecting and surfacing long-running search tasks, AutoOps performs an analysis of the underlying DSL or ES|QL search query, and provides a list of potential reasons for increased latency. This feature is useful to any kind of users who want to leverage the new ES|QL query language for their search, observability or security use cases, and es...
+- **[Elastic Inference Service (EIS) for Self Managed Clusters via Cloud Connected](https://github.com/elastic/roadmap/issues/141)**
+  - **What the feature is and who it’s for**
+Elastic Inference Service (EIS) is now available to self-managed Elasticsearch deployments through Cloud Connect. EIS provides access to Elastic-managed LLM, vector generation, and rerank models running on fast, GPU-based infrastructure. It powers advanced capabilities such as RAG, semantic search, and the AI Assistants in Elastic’s Search, Observability...
+- **[Serverless monitoring with AutoOps - Search AI lake and Search Tier](https://github.com/elastic/roadmap/issues/139)**
+  - **What the feature is and who it’s for**
+AutoOps for Elastic Cloud Serverless provides visibility into how project performance impacts compute and storage usage. Enabled automatically in supported regions, it offers curated dashboards, project-level metrics, and insight into key billing dimensions.
+
+Elastic Cloud Serverless automatically manages provisioning, monitoring, and autoscaling, with b...
+- **[Terraform Elasticstack - Security rules, CCS API Keys, Synthetics](https://github.com/elastic/roadmap/issues/129)**
+  - **What the feature is and who it's for:**
+Recent improvements to the Elastic Stack and Elastic Cloud Terraform providers introduce advanced Infrastructure-as-Code capabilities for the latest stack and cloud features. These enhancements give administrators increased control and flexibility when managing Elastic environments with Terraform.
+
+**Value proposition:**
+The latest additions to the Terr...
+- **[Trace Investigation in Discover](https://github.com/elastic/roadmap/issues/120)**
+  - **What the feature is and who it's for**
+A comprehensive trace search and analysis capability in Discover designed for developers, SREs, and DevOps engineers who need to investigate traces alongside other telemetry data using familiar Discover workflows.
+
+**Value proposition**
+Enable users to search and analyze traces directly in Discover using ESQL, reducing context switching between APM UI an...
+- **[Downsampling: more efficient "Last value only" downsampling](https://github.com/elastic/roadmap/issues/103)**
+  - **External Title**
+Less resource intensive "last value only" downsampling
+
+**Value Prop**
+Introduce “last value only” as another downsampling method, which just keeps the last value in each bucket instead of the additional statistics tracked by the existing downsampling method (min, max, sum, and value_count for gauges). This is a more light weight, cheaper downsampling method with reduced accu...
+- **[Reranking using 3rd party rerankers](https://github.com/elastic/roadmap/issues/98)**
+  - **External Product Outcome**
+Often a semantic model that allows very accurate ranking comes at a large cost in performance, resources, or both. It is impractical to use such a model to scan a large index, but it is often ideal to scan a large index using a more economic method, obtain the top ranking documents, and then rerank them using the accurate (though costly) model, because running it on...
+- **[Improve vector ingest and indexing performance](https://github.com/elastic/roadmap/issues/95)**
+  - To be able to search data, first one needs to get the data into the system and organize it in a structure that can be searched efficiently. That part is typically referred to as ingest and indexing. It is the first interaction any user has with the system, but it is also an ongoing part of the system operation and potentially consumes computing resources. Ingest and indexing performance is impo...
+- **[Faster and more efficient vector rescoring: Direct I/O vector rescoring](https://github.com/elastic/roadmap/issues/93)**
+  - Currently rescoring in vector search is done off-heap. This usually impacts the page cache and increases the variance in query latency (compared to the potential performance if it’s done on disk). It also makes it more difficult to calculate RAM needs and the impact of sizing on query latency. Rescoring vectors can be specified for all HNSW index types, including bbq_hnsw (the current default) ...
+- **[Faster and more efficient vector rescoring: Bulk vector rescoring](https://github.com/elastic/roadmap/issues/92)**
+  - Currently, rescoring in vector search is done by fetching and rescoring each vector separately, which is slower and requires more calls to the memory/disk. This slows query latency and increases resource consumption, and is less suitable for work with object store when the data is not cached. Rescoring vectors can be specified for all quantized HNSW index types, including bbq_hnsw (the current ...
+- **[Time-series support in ES|QL (Tech Preview)](https://github.com/elastic/roadmap/issues/88)**
+  - **External Title**
+Time-series support in ES|QL (Tech Preview)  - Advanced time series analytics
+
+**Value Prop**
+In Elasticsearch 9.2 we introduced as a Tech Preview the [TS command](https://www.elastic.co/docs/reference/query-languages/esql/commands/ts) to query time series data streams and an initial set of [time series aggregation functions](https://www.elastic.co/docs/reference/query-langua...
+- **[Support RCS2.0 in GovCloud FedRAMP ECH](https://github.com/elastic/roadmap/issues/87)**
+  - **What the feature is and who it’s for**
+Elastic Cloud customers that need to use our GovCloud FedRAMP environment for their deployments have strict compliance and security constraints because of the nature of their business.
+
+**Value proposition**
+We want customer to fully leverage all the latest security improvements, including the new strong identity verification for remote clusters performi...
+- **[Create classic streams](https://github.com/elastic/roadmap/issues/81)**
+  - **What the feature is** 
+
+Create classic streams
+
+**Value proposition**
+
+Create new classic streams in one click without having to go to several other places in Kibana or ingest data first. 
+
+**Expected outcome**
+
+* Can create classic streams in the interface
+- **[Read-only dashboards sharing](https://github.com/elastic/roadmap/issues/79)**
+  - **What the feature is (as Title)** Read-only dashboards sharing
+
+**What the feature is and who it’s for**
+Users want to build their dashboards and share them with colleagues without the risk that someone unintentionally modifies them. Today, all users with write access to a given Space can change any dashboard in it, and this approach doesn't really fit scenarios where more consistency is neede...
+- **[Freely place dashboard controls](https://github.com/elastic/roadmap/issues/77)**
+  - **What the feature is** 
+
+Freely placable controls in the dashboard
+
+**Value proposition** 
+Controls are a key filtering mechanism for users to get their insights in a dashboard. Placing controls freely in the dashboard instead of sticking them in the top of the dashboard will allow users to optimize their layouts. It will also allow users to filter only a subset of visualizations in their dash...
+- **[Chaining variable controls](https://github.com/elastic/roadmap/issues/74)**
+  - **What the feature is** 
+
+Chaining variable controls
+
+**Value proposition**
+Controls are a key mechanism for filtering the dashboard. Chaining variables will allow the output of a variable control to be the input of another variable control. This will allow for example to create one control to filter down the next which is specially useful for customers with complex environments where the data ...
+- **[Simplified search in ES|QL editors](https://github.com/elastic/roadmap/issues/70)**
+  - **What the feature is**
+
+Simplified Search in ES|QL editors
+
+**Value proposition**
+
+Analysts, support engineers, and SREs who prefer simple search inputs often find ES|QL syntax too technical for quick searches. This Simplified Search provides an effortless, KQL-like "type and go" experience that auto-generates valid ES|QL queries. By removing the need to learn complex syntax for basic searches...
+- **[Indexing dense vectors using Nvidia GPUs](https://github.com/elastic/roadmap/issues/66)**
+  - **External Title**
+Vector indexing with GPU
+
+**External Product Outcome**
+Indexing vectors into HNSW graphs with GPUs is significantly faster and more economic compared to indexing with CPUs. Using NVIDIA GPUs offers a performance improvement of around an order of magnitude (for the parts of the process that can be performed by a GPU).
+- **[Preserve input columns when calculating STATS (INLINE STATS)](https://github.com/elastic/roadmap/issues/63)**
+  - **Value Proposition**
+
+The STATS command only outputs the aggregations that you ask it for - it drops the input fields. Some use cases for the STATS command need to do another operation on the original fields afterwards but can't as those field are gone. You might want to compare an individual row's data with the aggregated data for the group it belongs to, e.g. comparing a per-group COUNT comp...
+- **[ES|QL: Lookup on more flexible criteria than single exact match](https://github.com/elastic/roadmap/issues/61)**
+  - **Value Proposition**
+
+Lookup Join introduced the ability to do SQL-style LEFT OUTER JOINs in ES|QL. The initial release of Lookup Join relies on a common field name between the left index (from the source command) and the right index (the lookup index), and an exact match of the field values. This satisfies many use cases but more flexibility is needed for other use cases. Users need to match ...
+- **[Time series data can efficiently display in the expected order](https://github.com/elastic/roadmap/issues/58)**
+  - **Value Proposition**
+
+Users searching logs and metrics data in Kibana typically want to see the results in timestamp order (newest first) by default, to see the most relevant data first. This is already true when using KQL/DSL in Kibana Discover. With ES|QL, we can return results quickly when they are unsorted, but sorting adds considerable overhead and latency.
+
+**Expected Outcomes**
+
+Sorting...
+- **[Reduce Log Storage Costs with Transparent Pattern-Based Compression](https://github.com/elastic/roadmap/issues/55)**
+  - Reduce Log Storage Costs with Pattern-based Compression for log messages (LogsDB) 
+
+## Value Prop
+
+LogsDB is composed of various optimizations that provide up to 3.2x storage savings for storing logs. Even after all those savings, in most log datasets the message field relatively uses most of the storage compared to other fields. This is because log messages are stored as is and general compres...
+- **[Random sampling in ES|QL to balance speed and accuracy](https://github.com/elastic/roadmap/issues/46)**
+  - **Value Proposition**
+
+Sometimes you want to aggregate a large dataset quickly but you don't need a 100% accurate result. If you're willing to tradeoff speed for accuracy, sampling can be used to reduce the volume of data that needs to be processed, while still providing usable results.
+
+**Expected outcomes**
+
+Accelerated query performance by reducing data volume in aggregations and visualizati...
+- **[ES|QL queries can return partial results when they encounter issues](https://github.com/elastic/roadmap/issues/45)**
+  - **Value Proposition**
+
+Distributed systems must be resilient to real world operational issues. A shard or node might be unavailable during a query, or one remote cluster times out while the others return results quickly. Most users we've talked to prefer to receive partial results, clearly indicated, rather than a failed search or query.
+
+**Expected outcomes**
+
+Introduce a new allow_partial_res...
+- **[Advanced AI Inference in ES|QL: Reranking, Text Generation, and Embeddings](https://github.com/elastic/roadmap/issues/44)**
+  - **What the feature is**
+Advanced AI Inference in ES|QL: RERANK Command, COMPLETION Command, and TEXT_EMBEDDING Function.
+
+**Value proposition**
+Users creating search and generative AI applications often struggle to fully integrate machine learning inference into their data and query pipelines. This typically requires separate tools or complex setup to use advanced models for tasks like re-order...
+- **[Analyze nanosecond precision log data with ES|QL](https://github.com/elastic/roadmap/issues/43)**
+  - **Value Proposition**
+
+Date nanoseconds is the default timestamp format for OTel. 8.18 made date nanos field type support GA in ES|QL. But if a query's data contained both date nanos and regular date types in the same field, the query would fail or return null. This would be expected for a data stream that has transitioned its timestamp from date to date nanos, and could break existing dashboar...
+- **[Strong identity verification for remote clusters](https://github.com/elastic/roadmap/issues/42)**
+  - **What the feature is and who it’s for**
+When configuring a remote cluster for CCS/CCR operations, cross-cluster API keys are created on the cluster that owns the data, and then they are deployed to the cluster that performs the remote query.
+These keys can be leaked during the initial transfer or exposed in misconfigured logs. Attackers can leverage a leaked cross-cluster API key to get unauth...
+- **[Information about slow ES|QL queries is available in ES logs](https://github.com/elastic/roadmap/issues/41)**
+  - **Value Proposition**
+
+Admins need to be able to identify slower queries so they can look for ways to optimise them. They might also need to log queries as an audit trail for policy and compliance reasons. For these reasons we need to be able to log ES|QL queries to a file.
+
+**Expected Outcome**
+
+For historical observability of query performance, users can enable query logs to capture ES|QL que...
+- **[Cross-region AWS PrivateLink support in Elastic Cloud Hosted](https://github.com/elastic/roadmap/issues/38)**
+  - **What the feature is and who it's for:**. Administrators can configure private connections with AWS PrivateLink, aka VPC endpoints or VPCEs, in their workloads' regions and apply them to Elastic Cloud Hosted deployments running in different regions. Previously, the VPCEs had to be configured in the same region as the deployment the customer wanted to connect to via PrivateLink. 
+
+**Value propo...
+- **[Marketplace Reseller Support: AWS and GCP](https://github.com/elastic/roadmap/issues/32)**
+  - **What the feature is and who it's for:** This feature enables Elastic Cloud customers to purchase Elastic Cloud subscriptions directly through their authorized channel partners (resellers) within the AWS and GCP marketplaces. This is designed for organizations that prefer to procure their cloud services and software through a specific, designated partner on AWS and GCP marketplaces. Customers ...
+- **[Elastic Cloud free trials on GCP and Azure marketplaces](https://github.com/elastic/roadmap/issues/31)**
+  - **What the feature is and who it's for:** This feature introduces a free trial experience for Elastic Cloud directly within the Google Cloud (GCP) and Microsoft Azure marketplaces. This update brings the same trial capability, already present in the AWS marketplace, to the other major cloud providers. It is designed for new customers who use GCP or Azure and want to evaluate our serverless or h...
+- **[IPv6 support for Elastic Cloud Hosted in GovCloud Moderate](https://github.com/elastic/roadmap/issues/30)**
+  - **What the feature is and who it’s for**
+IPv6 dual-stack (IPv4/IPv6) support for ingress and egress traffic in Elastic Cloud Hosted within the FedRAMP Moderate environment. This is designed for U.S. Federal Government agencies and customers operating in IPv6-enabled or compliance-driven environments.
+
+**Value proposition**
+Enables government customers and agencies to meet IPv6 mandates ([OMB M-...
+- **[Adding Serverless regions: 4 GCP](https://github.com/elastic/roadmap/issues/28)**
+  - **What the feature is and who it’s for**
+We will be adding 4 more Serverless regions for customers to create Serverless projects to a region closer to them. 
+
+**Value proposition**
+With Elastic Cloud Serverless, customers can now deploy closer to your users and data — reducing latency, supporting data residency and compliance requirements, and simplifying multicloud operations. Whether you're b...
+- **[Proofpoint Essentials Integration](https://github.com/elastic/roadmap/issues/27)**
+  - **What the feature is**: Proofpoint Essentials SIEM Integration
+
+**Value proposition**: Extends Proofpoint integration support to Essentials customers by ingesting threat data from the new Essentials Threat API, enabling SMB and mid-market organizations to gain the same email security visibility that Enterprise TAP customers currently have.
+
+**Expected outcome**: Threat data from Proofpoint Ess...
+- **[macOS Unified Logs Integration](https://github.com/elastic/roadmap/issues/24)**
+  - **What the feature is**: Native macOS Security Events Integration
+
+**Value proposition**: Provides security teams with filtered, actionable macOS telemetry focused exclusively on security-relevant events (authentication, privilege escalation, process execution, file changes, network activity) without the overwhelming volume of operational noise generated by the full unified logging system.
+
+**E...
+- **[Update public-roadmap---item-template.md](https://github.com/elastic/roadmap/pull/23)**
+- **[Introduce Elastic Observability Logs Essentials for Cost-Effective Serverless Log Analytics](https://github.com/elastic/roadmap/issues/21)**
+  - **Value proposition**
+Elastic Observability Logs Essentials provides a powerful, yet cost-effective and operationally simple solution optimized for logs-only use cases.
+
+This feature offers:
+
+_Superior Cost Efficiency & Predictability:_ This tier is the lowest cost of entry point to Elastic Serverless Observability.  Users are billed based solely on consumption (ingest and retention), eliminati...
+- **[Elastic Inference Service - Adding additional AWS regions for LLM access](https://github.com/elastic/roadmap/issues/19)**
+  - **Provisional - do not publish**
+
+The managed Elastic LLM is now available through more AWS regions! 
+
++ AWS: EMEA (eu-west-1)
+
++ AWS: APJ (ap-southeast-1)
+- **[Decoupled search and ingest workloads for Elastic Cloud hosted and self-managed Elasticsearch](https://github.com/elastic/roadmap/issues/16)**
+  - **What the feature is and who it’s for**
+Elastic Cloud hosted and self managed Elasticsearch users gain the benefits of a new architecture to decouple search and ingest workloads. 
+
+**Value proposition**
+Customers no longer have to scale for the peak search or ingest workloads, but can easily decouple this for more efficient self-managed scaling in response to the characteristics of their inges...
+- **[Semantic search - on any deployment type](https://github.com/elastic/roadmap/issues/15)**
+  - Semantic search whether through ES|QL or query DSL is now supported across self-hosted, Elastic Cloud Hosted and Elastic Cloud Serverless.
+- **[Secure by default, introducing Guardrails support in the Elastic Inference Service](https://github.com/elastic/roadmap/issues/13)**
+  - **What the feature is and who it’s for**
+
+**Value proposition**
+
+**Expected outcome / behaviors**
+
+**Optional: Key user stories / use cases**
+- **[Adding Serverless regions: 3 Azure, 3 GCP and 2 AWS regions](https://github.com/elastic/roadmap/issues/2)**
+  - **What the feature is and who it’s for**
+We will be adding 8 more Serverless regions for customers to create Serverless projects to a region closer to them. 
+
+**Value proposition**
+With Elastic Cloud Serverless, customers can now deploy closer to your users and data — reducing latency, supporting data residency and compliance requirements, and simplifying multicloud operations. Whether you're b...
+- **[AutoOps for Self Managed Clusters (Cloud Connected)](https://github.com/elastic/roadmap/issues/1)**
+  - **What the feature is and who it’s for**
+AutoOps for self-managed clusters brings the same real-time diagnostics, performance tuning, and issue detection capabilities available in Elastic Cloud to customers running Elasticsearch on their own infrastructure. It helps enterprise administrators, DevOps, and SRE teams simplify cluster management, improve performance, and reduce hardware costs witho...
+
+---
+
+For the current list and any changes since this snapshot, see the live board: [Elastic Public Roadmap](https://github.com/orgs/elastic/projects/2066/views/2).
+
+*Last updated: 2026-02-12 (from exported view data).*
