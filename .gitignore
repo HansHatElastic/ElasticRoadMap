@@ -6,7 +6,7 @@ env/
 # Export files (optional: keep sample so script runs without manual export)
 *.tsv
 *.csv
-!data/roadmap_export.tsv
+docs/elastic-public-roadmap.md
 
 # Python
 __pycache__/
