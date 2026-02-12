@@ -46,13 +46,7 @@ This reads `data/roadmap_export.tsv` and writes `docs/elastic-public-roadmap.md`
 python scripts/generate_roadmap_doc.py --input path/to/export.tsv --output path/to/roadmap.md
 ```
 
-## Import into Google Docs
 
-1. Open [Google Docs](https://docs.google.com).
-2. **File → Open → Upload** and select `docs/elastic-public-roadmap.md`, or paste the file contents into a new document.
-3. Docs will preserve headings, lists, links, and bold text.
-
-You can then edit and share the doc as a base for customer communication.
 
 ## Files
 
@@ -64,6 +58,3 @@ You can then edit and share the doc as a base for customer communication.
 | `docs/elastic-public-roadmap.md` | Generated roadmap document. |
 | `README.md` | This file. |
 
-## Optional: automate with the GitHub API
-
-The script currently uses an exported view file (Option A). You can later add support for the [GitHub Projects GraphQL API](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-your-project) (Option B) with a personal access token (`read:project` scope) to fetch project 2066 without a manual export. The token would be passed via an environment variable and must not be committed.
